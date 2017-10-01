@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
             Bundle b = getIntent().getExtras();
             if(b.getString("back")!=null){
                 tv2.setText(b.getString("back"));
+            }else{
+                tv2.setText("");
             }
         }
         super.onResume();

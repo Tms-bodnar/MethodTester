@@ -6,35 +6,40 @@
     android:layout_height="match_parent"
     tools:context="hu.okosnotesz.methodtester.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/tvSec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvSec"
-        android:text="Second Activity"
+        android:layout_margin="30dp"
         android:clickable="true"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="30dp"/>
+        android:gravity="center"
+        android:text="Second Activity"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <EditText
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/et1"
-        android:hint="et1"
+        android:hint="edittext 1"
         app:layout_constraintTop_toBottomOf="@id/tvSec"
-        android:layout_margin="30dp"/>
+        app:layout_constraintStart_toStartOf="@id/tvSec"
+        android:layout_marginTop="30dp" />
 
     <Button
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="save et1"
+        android:text="save edittext1"
         app:layout_constraintTop_toBottomOf="@id/et1"
-        android:layout_margin="30dp"/>
+        app:layout_constraintStart_toStartOf="@id/et1"
+        android:layout_marginTop="28dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv2"
         app:layout_constraintTop_toBottomOf="@id/btn1"
+        app:layout_constraintStart_toStartOf="@id/btn1"
         android:layout_margin="30dp"/>
 
 </android.support.constraint.ConstraintLayout>
